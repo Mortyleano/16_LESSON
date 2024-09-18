@@ -3,6 +3,7 @@ package tests.registration;
 import models.RegistrationBodyModel;
 import models.RegistrationResponseModel;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import tests.TestBase;
 
@@ -22,6 +23,7 @@ public class CheckRegistrationTests extends TestBase {
     private static final String API_PATH = "/register";
 
     @Test
+    @Tag("smoke")
     @DisplayName("Проверяет успешную регистрацию пользователя")
     void checkSuccessfulRegistrationTest() {
         RegistrationBodyModel registration = new RegistrationBodyModel();
@@ -44,6 +46,7 @@ public class CheckRegistrationTests extends TestBase {
     }
 
     @Test
+    @Tag("smoke")
     @DisplayName("Проверяет ошибку регистрации при отсутствии ввода пароля")
     void checkRegistrationWithoutPasswordTest() {
         RegistrationBodyModel registration = new RegistrationBodyModel();
@@ -65,6 +68,7 @@ public class CheckRegistrationTests extends TestBase {
     }
 
     @Test
+    @Tag("smoke")
     @DisplayName("Проверяет ошибку регистрации при отсутствии ввода e-mail")
     void checkRegistrationWithoutEmailTest() {
         RegistrationBodyModel registration = new RegistrationBodyModel();
