@@ -13,6 +13,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import static specs.CreateUserSpec.*;
 
+@DisplayName("Проверяет API метод для создания пользователя пользователя")
 public class CheckCreateUserTests extends TestBase {
 
     public static final String USER_NAME = "Alexander";

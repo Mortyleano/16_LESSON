@@ -14,6 +14,7 @@ import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.notNullValue;
 import static specs.RegistrationSpec.*;
 
+@DisplayName("Проверяет API метод для регистрации пользователя")
 public class CheckRegistrationTests extends TestBase {
 
     private static final String EMAIL = "eve.holt@reqres.in";
