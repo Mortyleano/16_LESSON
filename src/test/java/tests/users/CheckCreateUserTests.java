@@ -13,6 +13,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import static specs.CreateUserSpec.*;
 
+@Tag("smoke")
 @DisplayName("Проверяет API метод для создания пользователя")
 public class CheckCreateUserTests extends TestBase {
 
@@ -21,7 +22,6 @@ public class CheckCreateUserTests extends TestBase {
     private static final String API_PATH = "/users";
 
     @Test
-    @Tag("smoke")
     @DisplayName("Проверяет успешное создание пользователя при вводе всех полей")
     void checkCreateUserTestWithNameAndJob() {
         CreateUserBodyModel createUser = new CreateUserBodyModel();
@@ -48,7 +48,6 @@ public class CheckCreateUserTests extends TestBase {
     }
 
     @Test
-    @Tag("smoke")
     @DisplayName("Проверяет создание пользователя при вводе имени без наименования профессии")
     void checkCreateUserTestWithoutJob() {
         CreateUserBodyModel createUser = new CreateUserBodyModel();
@@ -74,7 +73,6 @@ public class CheckCreateUserTests extends TestBase {
     }
 
     @Test
-    @Tag("smoke")
     @DisplayName("Проверяет создание пользователя при вводе наименования профессии без имени")
     void checkCreateUserTestWithoutName() {
         CreateUserBodyModel createUser = new CreateUserBodyModel();

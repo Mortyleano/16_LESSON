@@ -14,6 +14,7 @@ import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.notNullValue;
 import static specs.RegistrationSpec.*;
 
+@Tag("smoke")
 @DisplayName("Проверяет API метод для регистрации пользователя")
 public class CheckRegistrationTests extends TestBase {
 
@@ -24,7 +25,6 @@ public class CheckRegistrationTests extends TestBase {
     private static final String API_PATH = "/register";
 
     @Test
-    @Tag("smoke")
     @DisplayName("Проверяет успешную регистрацию пользователя")
     void checkSuccessfulRegistrationTest() {
         RegistrationBodyModel registration = new RegistrationBodyModel();
@@ -47,7 +47,6 @@ public class CheckRegistrationTests extends TestBase {
     }
 
     @Test
-    @Tag("smoke")
     @DisplayName("Проверяет ошибку регистрации при отсутствии ввода пароля")
     void checkRegistrationWithoutPasswordTest() {
         RegistrationBodyModel registration = new RegistrationBodyModel();
@@ -69,7 +68,6 @@ public class CheckRegistrationTests extends TestBase {
     }
 
     @Test
-    @Tag("smoke")
     @DisplayName("Проверяет ошибку регистрации при отсутствии ввода e-mail")
     void checkRegistrationWithoutEmailTest() {
         RegistrationBodyModel registration = new RegistrationBodyModel();

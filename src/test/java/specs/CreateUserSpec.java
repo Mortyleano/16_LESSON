@@ -14,9 +14,7 @@ public class CreateUserSpec {
 
     public static RequestSpecification createUserRequestSpec = with()
             .filter(withCustomTemplates())
-            .log().uri()
-            .log().body()
-            .log().headers()
+            .log().all()
             .contentType(JSON);
 
     public static ResponseSpecification createUserResponseSpec = new ResponseSpecBuilder()

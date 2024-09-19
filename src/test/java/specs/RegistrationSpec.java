@@ -14,9 +14,7 @@ public class RegistrationSpec {
 
     public static RequestSpecification registrationRequestSpec = with()
             .filter(withCustomTemplates())
-            .log().uri()
-            .log().body()
-            .log().headers()
+            .log().all()
             .contentType(JSON);
 
     public static ResponseSpecification registrationResponseSpec = new ResponseSpecBuilder()
